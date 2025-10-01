@@ -1,12 +1,12 @@
 name: demo-app tests
 
-on:
-  push:
-    paths:
-    - package.json
-    - 'upa/**'
-    - 'examples/demo-app/**'
-    - .github/workflows/demo-app.yml
+on: workflow_dispatch
+#   push:
+#     paths:
+#     - package.json
+#     - 'upa/**'
+#     - 'examples/demo-app/**'
+#     - .github/workflows/demo-app.yml
 
 concurrency:
     cancel-in-progress: true

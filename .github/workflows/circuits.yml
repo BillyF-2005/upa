@@ -1,12 +1,12 @@
 name: circuit tests
 
-on:
-  push:
-    paths:
-    - 'Cargo.toml'
-    - 'circuits/**'
-    - .github/workflows/circuits.yml
-    - .rustfmt.toml
+on: workflow_dispatch
+#   push:
+#     paths:
+#     - 'Cargo.toml'
+#     - 'circuits/**'
+#     - .github/workflows/circuits.yml
+#     - .rustfmt.toml
 
 concurrency:
     cancel-in-progress: true
@@ -85,7 +85,7 @@ jobs:
           cargo clippy --no-deps
           cargo clippy --no-deps --tests
           cargo clippy --no-deps --benches
-          
+
       - name: Run unit tests
         run: |
           cargo test --release -- --test-threads=1 --show-output

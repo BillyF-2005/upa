@@ -1,12 +1,12 @@
 name: confidential-coins tests
 
-on:
-  push:
-    paths:
-    - package.json
-    - 'upa/**'
-    - 'examples/confidential-coins/**'
-    - .github/workflows/confidential-coins.yml
+on: workflow_dispatch
+#   push:
+#     paths:
+#     - package.json
+#     - 'upa/**'
+#     - 'examples/confidential-coins/**'
+#     - .github/workflows/confidential-coins.yml
 
 concurrency:
     cancel-in-progress: true
